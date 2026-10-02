@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0f2d4a">
+<title>Beyond Bandwidth Rebus Puzzle</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="shell">
+
+  <section class="hero">
+    <div class="eyebrow">BEYOND BANDWIDTH • #OffTheClock</div>
+    <h1>REBUS PUZZLE</h1>
+    <p>Can You Crack the Code?</p>
+  </section>
+
+  <section class="puzzle-card">
+    <div class="section-head">
+      <div>
+        <h2>Puzzle Board</h2>
+        <p>Study the puzzle, then submit all eight answers below.</p>
+      </div>
+      <button type="button" id="zoomBtn" class="secondary">Tap to enlarge</button>
+    </div>
+
+    <button type="button" class="image-button" id="imageButton" aria-label="Enlarge puzzle image">
+      <img src="puzzle.png" alt="Beyond Bandwidth Rebus Puzzle board">
+    </button>
+  </section>
+
+  <section class="form-card">
+    <h2>Submit Your Answers</h2>
+
+    <form id="rebusForm" action="https://script.google.com/macros/s/AKfycbw_i5mhlKsWtN_B4LWt9m9oe1Yz1xR4g4Y0rI3AjCUBEmoBylb7NySOk3kmcgWtZah80w/exec" method="POST" target="submitFrame">
+      <input type="hidden" name="source" value="bb-rebus-2026">
+      <input class="honeypot" name="website" tabindex="-1" autocomplete="off">
+
+      <label for="name">Name *</label>
+      <input id="name" name="name" required maxlength="120">
+
+      <label for="identity">Work Email / Employee ID *</label>
+      <input id="identity" name="identity" required maxlength="160">
+
+      <div class="answers-grid">
+        
+        <div>
+          <label for="a1">Answer 1 *</label>
+          <textarea id="a1" name="answer1" required maxlength="500"></textarea>
+        </div>
+        
+        <div>
+          <label for="a2">Answer 2 *</label>
+          <textarea id="a2" name="answer2" required maxlength="500"></textarea>
+        </div>
+        
+        <div>
+          <label for="a3">Answer 3 *</label>
+          <textarea id="a3" name="answer3" required maxlength="500"></textarea>
+        </div>
+        
+        <div>
+          <label for="a4">Answer 4 *</label>
+          <textarea id="a4" name="answer4" required maxlength="500"></textarea>
+        </div>
+        
+        <div>
+          <label for="a5">Answer 5 *</label>
+          <textarea id="a5" name="answer5" required maxlength="500"></textarea>
+        </div>
+        
+        <div>
+          <label for="a6">Answer 6 *</label>
+          <textarea id="a6" name="answer6" required maxlength="500"></textarea>
+        </div>
+        
+        <div>
+          <label for="a7">Answer 7 *</label>
+          <textarea id="a7" name="answer7" required maxlength="500"></textarea>
+        </div>
+        
+        <div>
+          <label for="a8">Answer 8 *</label>
+          <textarea id="a8" name="answer8" required maxlength="500"></textarea>
+        </div>
+        
+      </div>
+
+      <div class="privacy-note">
+        Your details are used only for this Rebus Puzzle submission and related recognition/communication.
+      </div>
+
+      <button id="submitBtn" class="primary" type="submit">Submit My Answers</button>
+
+      <div id="status" class="status" role="status" aria-live="polite"></div>
+    </form>
+
+    <iframe id="submitFrame" name="submitFrame" title="Submission target"></iframe>
+  </section>
+
+  <footer>Beyond Bandwidth • #OffTheClock</footer>
+</main>
+
+<div id="lightbox" class="lightbox" aria-hidden="true">
+  <button type="button" id="closeLightbox" class="close" aria-label="Close enlarged puzzle">×</button>
+  <img src="puzzle.png" alt="Enlarged Rebus Puzzle board">
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
